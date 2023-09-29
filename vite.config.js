@@ -6,11 +6,12 @@ export default {
     vituum(),
     twig({
       root: "./src/pages",
+      formats: ['twig', 'json.twig', 'json', 'twig.html']
     }),
   ],
   build: {
     rollupOptions: {
-      input: ["index.twig"],
+      input: ["index.twig.html"],
     },
   },
 };
