@@ -13,7 +13,7 @@
     />
 
     <script src="assets/js/video.min.js" defer></script>
-    <script type="module" src="/main.js" defer></script>
+    <script type="module" src="/src/main.js" defer></script>
   </head>
   <body>
     <header>
@@ -146,12 +146,69 @@
             <section class="section-title">
               <h1>L'établissement</h1>
               <hr class="section-title-separator" />
-  
+
               <div class="yellow-box"></div>
               <div class="red-box"></div>
               <div class="blue-box"></div>
             </section>
           </section>
+
+          <section class="school-presentation">
+            <article class="overlay">
+              <h2>L'histoire</h2>
+
+              <p>
+                Au début du siècle, l’Abbé Simonin créa pour les garçons, une
+                école d’enseignement libre : l’institution St Joseph qui se
+                transforma le 15 mars 1903, grâce à un groupe de personnalités
+                d’Enghien, en un établissement d’enseignement privé, la Société
+                d’Enseignement Moderne, présidée par Monsieur Maciet. Cette
+                société prit le nom d’Institution d’Enseignement Moderne et
+                s’installa boulevard Sadi-Carnot où elle se trouve encore,
+                Monsieur Laverhne, premier directeur laïc, ouvrit l’année
+                scolaire 1903/1904 avec 27 élèves.
+              </p>
+              <ul>
+                <li>
+                  <a
+                    href="https://ndp-enghien.org/images/presentation2.pdf"
+                    class="decouvrir-presentation"
+                    >Découvrir</a
+                  >
+                </li>
+                <li>
+                  <button class="video-button">
+                    <i class="fas fa-play"></i> L'école en vidéo
+                  </button>
+                </li>
+              </ul>
+            </article>
+            <img src="assets/images/presentation/presentation.png" alt="" />
+          </section>
+
+          <section class="section-title-wrapper">
+            <section class="section-title">
+              <h1>Liens</h1>
+              <hr class="section-title-separator" />
+
+              <div class="yellow-box"></div>
+              <div class="red-box"></div>
+              <div class="blue-box"></div>
+            </section>
+          </section>
+
+          <section class="section-title-wrapper">
+            <section class="section-title">
+              <h1>Parternzaires</h1>
+              <hr class="section-title-separator" />
+
+              <div class="yellow-box"></div>
+              <div class="red-box"></div>
+              <div class="blue-box"></div>
+            </section>
+          </section>
+
+          {% include 'includes/partners.twig' %}
         </section>
       </section>
     </main>

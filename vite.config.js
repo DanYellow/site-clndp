@@ -1,19 +1,16 @@
-import nunjucks from "@vituum/vite-plugin-nunjucks";
+import twig from "@vituum/vite-plugin-twig";
 import vituum from "vituum";
 
 export default {
-  css: {
-    preprocessorOptions: {
-      scss: {
-      },
-    },
-  },
   plugins: [
-    nunjucks()
+    vituum(),
+    twig({
+      root: "./src/pages",
+    }),
   ],
   build: {
-    // rollupOptions: {
-    //   input: ["index.njk.html"],
-    // },
+    rollupOptions: {
+      input: ["index.twig"],
+    },
   },
 };
