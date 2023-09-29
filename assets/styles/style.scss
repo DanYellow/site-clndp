@@ -33,6 +33,10 @@ body {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 .main {
   background: url("assets/images/header/background-header.svg") no-repeat right
     top;
@@ -78,10 +82,19 @@ body {
     position: relative;
   }
 
+  .section-title-separator {
+    height: 3px;
+    color: #f8cb53;
+    background-color: #f8cb53;
+    width: 145px;
+    border: none;
+    margin: 20px auto 0;
+  }
+
   .yellow-box {
     position: absolute;
     background-color: #f8cb53;
-    right: -54px;
+    right: -20%;
     bottom: 50%;
     height: 20px;
     width: 20px;
@@ -110,13 +123,30 @@ body {
   .socials-activities-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 45px 30px;
+    gap: 30px 20px;
     justify-content: center;
 
+    &::after {
+      content: "";
+      flex: auto;
+    }
+
+    @include tablet-max {
+      flex-wrap: nowrap;
+      column-gap: 10px;
+      justify-content: space-between;
+      overflow-y: hidden;
+      overflow-x: auto;
+    }
+
     li {
-      flex: 1 0 21%;
+      flex: 1 0 23%;
       aspect-ratio: 1 / 1;
       position: relative;
+
+      @include tablet-max {
+        flex: 1 0 95%;
+      }
 
       img {
         width: 100%;
@@ -135,5 +165,27 @@ body {
         color: white;
       }
     }
+  }
+}
+
+.cta-wrapper {
+  margin: 55px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link-cta {
+  background-color: #f8cb53;
+  color: white;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  padding: 14px 42px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken(#f8cb53, 15);
   }
 }
