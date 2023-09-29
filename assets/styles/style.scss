@@ -21,29 +21,3 @@ body {
   margin: 0;
 }
 
-.contact-bar {
-  display: flex;
-  padding: 11px 179px;
-  column-gap: 0.85rem;
-
-  li {
-    display: flex;
-    align-items: center;
-    column-gap: 9px;
-
-    &:last-child {
-      margin-left: auto;
-    }
-  }
-  
-  p {
-    font-size: 0.75rem;
-    color: #418cd8;
-    font-weight: 700;
-    line-height: normal;
-  }
-
-  i {
-    color: #F8CB53;
-  }
-}
