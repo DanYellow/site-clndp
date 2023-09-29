@@ -1,3 +1,5 @@
+@import "./media-queries.scss";
+
 footer {
   background-color: #418cd8;
   color: #ffffff;
@@ -11,6 +13,12 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  @include tablet-max {
+    flex-direction: column-reverse;
+    row-gap: 2rem;
+    text-align: center;
+  }
 
   .logo-copyright {
     margin-top: 23px;

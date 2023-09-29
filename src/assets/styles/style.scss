@@ -38,6 +38,12 @@ a {
   text-decoration: none;
 }
 
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+}
+
 .main {
   background: url("assets/images/header/background-header.svg") no-repeat right
     top;
@@ -66,6 +72,10 @@ a {
 .video-container {
   width: 65%;
   position: relative;
+
+  @include tablet-max {
+    width: 100%;
+  }
 
   video {
     z-index: 1;
@@ -143,34 +153,34 @@ a {
   }
 }
 
+
+
+
+  // @include tablet-max {
+  //   grid-template-columns: repeat(2, 1fr);
+  //   gap: 1rem;
+  // }
+
 .socials-activities {
   .socials-activities-list {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px 20px;
-    justify-content: center;
-
-    &::after {
-      content: "";
-      flex: auto;
-    }
 
     @include tablet-max {
-      flex-wrap: nowrap;
+      grid-template-columns: none;
+
       column-gap: 10px;
-      justify-content: space-between;
+      grid-auto-flow: column; 
       overflow-y: hidden;
       overflow-x: auto;
+      grid-auto-columns: 90%;
     }
 
     li {
-      flex: 1 0 23%;
+      width: 100%;
       aspect-ratio: 1 / 1;
       position: relative;
-
-      @include tablet-max {
-        flex: 1 0 95%;
-      }
 
       img {
         width: 100%;
@@ -257,7 +267,7 @@ a {
     background-color: #f8cb53;
     color: #ffffff;
     padding: 10px 20px;
-    border-radius: 5px 0 0 5px;
+    border-radius: 5px;
     display: inline-flex;
     align-items: center;
     text-decoration: none;
@@ -265,11 +275,13 @@ a {
 }
 
 .list-partners {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5, 127px);
   justify-content: space-around;
 
+
   @include tablet-max {
-    flex-wrap: wrap;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
 
@@ -280,15 +292,9 @@ a {
     justify-content: center;
     border: 3px solid #f8cb53;
     background-color: #ffffff;
-    width: 127px;
-    height: 117px;
+    aspect-ratio: 1.085;
     transition: border 0.2s ease-in-out;
 
-    @include tablet-max {
-      aspect-ratio: 1.085;
-      width: 45%;
-      height: auto;
-    }
 
     &:hover {
       border: 3px solid #418cd8;
