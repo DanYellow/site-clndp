@@ -1,5 +1,6 @@
 @import "./media-queries.scss";
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Condensed:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap');
 
 :root {
   --header-size: 3rem;
@@ -65,6 +66,29 @@ a {
 .video-container {
   width: 65%;
   position: relative;
+
+  video {
+    z-index: 1;
+  }
+
+  .square-background {
+    position: absolute;
+    background-color: #418cd8;
+    width: 60%;
+    height: 50%;
+    top: 53%;
+    left: -10px;
+    z-index: 0;
+  }
+}
+
+.main-title {
+  font-size: 3rem;
+  color: #418CD8;
+  margin: 0px;
+  max-width: 600px;
+  font-weight: bold;
+  margin: 60px 0;
 }
 
 .section-title-wrapper {
@@ -199,7 +223,7 @@ a {
     left: 0;
     bottom: 0;
     right: 50%;
-    background: #418cd8cc;
+    background: #418cd8e1;
     color: #fff;
     padding: 64px;
 
@@ -215,27 +239,8 @@ a {
 
     p {
       margin-bottom: 20px;
-    }
-
-    .decouvrir-presentation {
-      color: #f8cb53;
-      position: relative;
-      font-weight: bold;
-
-      &::after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 120%;
-        width: 44px;
-        height: 2px;
-        background-color: #f8cb53;
-        transition: width 0.3s;
-      }
-
-      &:hover::after {
-        width: 100%; /* ajuster cette valeur pour contrôler combien le trait s'étend sur le survol */
-      }
+      font-family: "Open Sans", sans-serif;
+      line-height: normal;
     }
   }
 
@@ -300,6 +305,46 @@ a {
       object-fit: contain;
       height: 100%;
       width: 100%;
+    }
+  }
+}
+
+.decouvrir-presentation {
+  color: #f8cb53;
+  position: relative;
+  font-weight: bold;
+
+  &.before {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 120%;
+      width: 44px;
+      height: 2px;
+      background-color: #f8cb53;
+      transition: width 0.3s;
+    }
+  
+    &:hover::before {
+      width: 100%; /* ajuster cette valeur pour contrôler combien le trait s'étend sur le survol */
+    }
+  }
+
+  &.after {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 120%;
+      width: 44px;
+      height: 2px;
+      background-color: #f8cb53;
+      transition: width 0.3s;
+    }
+  
+    &:hover::after {
+      width: 100%; /* ajuster cette valeur pour contrôler combien le trait s'étend sur le survol */
     }
   }
 }
