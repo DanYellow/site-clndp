@@ -1,6 +1,6 @@
 @import "./media-queries.scss";
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Condensed:wght@400;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap");
 
 :root {
   --header-size: 3rem;
@@ -94,7 +94,7 @@ button {
 
 .main-title {
   font-size: 3rem;
-  color: #418CD8;
+  color: #418cd8;
   margin: 0px;
   max-width: 600px;
   font-weight: bold;
@@ -153,13 +153,10 @@ button {
   }
 }
 
-
-
-
-  // @include tablet-max {
-  //   grid-template-columns: repeat(2, 1fr);
-  //   gap: 1rem;
-  // }
+// @include tablet-max {
+//   grid-template-columns: repeat(2, 1fr);
+//   gap: 1rem;
+// }
 
 .socials-activities {
   .socials-activities-list {
@@ -171,7 +168,7 @@ button {
       grid-template-columns: none;
 
       column-gap: 10px;
-      grid-auto-flow: column; 
+      grid-auto-flow: column;
       overflow-y: hidden;
       overflow-x: auto;
       grid-auto-columns: 90%;
@@ -186,6 +183,7 @@ button {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        display: block;
       }
 
       .activity-title {
@@ -227,6 +225,10 @@ button {
 .school-presentation {
   position: relative;
 
+  @include burger-enable {
+    margin: 0 -0.5rem;
+  }
+
   .overlay {
     position: absolute;
     top: 0;
@@ -252,11 +254,15 @@ button {
       font-family: "Open Sans", sans-serif;
       line-height: normal;
     }
+
+    ul li {
+      margin-bottom: 35px;
+    }
   }
 
   img {
     width: 100%;
-    height: 38vh;
+    height: 500px;
     object-fit: cover;
     display: block;
   }
@@ -279,7 +285,6 @@ button {
   grid-template-columns: repeat(5, 127px);
   justify-content: space-around;
 
-
   @include tablet-max {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
@@ -294,7 +299,6 @@ button {
     background-color: #ffffff;
     aspect-ratio: 1.085;
     transition: border 0.2s ease-in-out;
-
 
     &:hover {
       border: 3px solid #418cd8;
@@ -331,7 +335,7 @@ button {
       background-color: #f8cb53;
       transition: width 0.3s;
     }
-  
+
     &:hover::before {
       width: 100%; /* ajuster cette valeur pour contrôler combien le trait s'étend sur le survol */
     }
@@ -348,7 +352,7 @@ button {
       background-color: #f8cb53;
       transition: width 0.3s;
     }
-  
+
     &:hover::after {
       width: 100%; /* ajuster cette valeur pour contrôler combien le trait s'étend sur le survol */
     }

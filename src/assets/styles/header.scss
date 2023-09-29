@@ -7,7 +7,7 @@
   padding: 10px 30px;
   column-gap: 0.85rem;
   margin: 0 auto;
-  max-width: 1440px;
+  max-width: var(--max-width);
 
   li {
     display: flex;
@@ -40,18 +40,32 @@
 
 .navbar {
   background-color: #418cd8;
-  overflow: hidden;
+  // overflow: hidden;
 
   ul {
     display: flex;
-    max-width: 1440px;
+    max-width: var(--max-width);
     margin: 0 auto;
     justify-content: center;
+    position: relative;
 
-    // @include tablet-max {
-    //   overflow: auto;
-    //   justify-content: flex-start;
-    // }
+    @include burger-enable {
+      overflow: auto;
+      justify-content: flex-start;
+    }
+
+    li {
+      display: inline-block;
+      position: relative;
+
+      &:hover > a {
+        background-color: darken(#f8cb53, 15);
+      }
+    }
+
+    > li:hover > ul {
+      display: block;
+    }
   }
 
   a {
@@ -68,8 +82,40 @@
       background-color: #f8cb53;
     }
 
-    &:hover {
-      background-color: darken(#f8cb53, 15);
+    &.sign-in {
+      color: black;
+      background-color: white;
+    }
+  }
+
+  .sub-menu {
+    display: none;
+    position: absolute;
+    background-color: #418cd8;
+    z-index: 9999;
+    width: 100%;
+
+    li {
+      box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+      display: block;
+      position: relative;
+
+      a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        font-weight: 500;
+        position: relative;
+        white-space: initial;
+      }
+    }
+
+    .sub-menu {
+      left: 100%;
+  top: 0;
+
     }
   }
 }
