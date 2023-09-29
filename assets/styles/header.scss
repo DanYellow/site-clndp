@@ -1,9 +1,13 @@
+@import "./media-queries.scss";
+
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Condensed:wght@400;700&display=swap");
 
 .contact-bar {
   display: flex;
-  padding: 11px 179px;
+  padding: 10px 30px;
   column-gap: 0.85rem;
+  margin: 0 auto;
+  max-width: 1440px;
 
   li {
     display: flex;
@@ -36,11 +40,18 @@
 
 .navbar {
   background-color: #418cd8;
+  overflow: hidden;
+
   ul {
     display: flex;
-    justify-content: space-between;
-    max-width: 1600px;
+    max-width: 1440px;
     margin: 0 auto;
+    justify-content: center;
+
+    // @include tablet-max {
+    //   overflow: auto;
+    //   justify-content: flex-start;
+    // }
   }
 
   a {
@@ -51,9 +62,14 @@
     display: block;
     font-weight: 800;
     font-family: "Open Sans", sans-serif;
+    white-space: nowrap;
 
     &.active {
       background-color: #f8cb53;
+    }
+
+    &:hover {
+      background-color: darken(#f8cb53, 15);
     }
   }
 }

@@ -21,3 +21,31 @@ body {
   margin: 0;
 }
 
+.main {
+  background: url("assets/images/header/background-header.svg") no-repeat right
+    top;
+  background-size: cover;
+}
+
+.main-content {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.video-cropper {
+  overflow: hidden;
+  position: relative;
+  height: 60vh;
+
+  .video-container {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.video-container {
+  width: 65%;
+  position: relative;
+}
