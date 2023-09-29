@@ -2,12 +2,25 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Condensed:wght@400;700&display=swap");
 
+.burger-icon-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  .burger-btn {
+    margin: 1rem 0;
+    font-size: 2rem;
+  }
+}
+
 .contact-bar {
   display: flex;
   padding: 10px 30px;
   column-gap: 0.85rem;
   margin: 0 auto;
   max-width: var(--max-width);
+
+  @include tablet-max {
+    display: none;
+  }
 
   li {
     display: flex;
@@ -40,7 +53,6 @@
 
 .navbar {
   background-color: #418cd8;
-  // overflow: hidden;
 
   ul {
     display: flex;
@@ -63,8 +75,10 @@
       }
     }
 
-    > li:hover > ul {
-      display: block;
+    @include burger-disable {
+      > li:hover > ul {
+        display: block;
+      }
     }
   }
 
@@ -114,8 +128,7 @@
 
     .sub-menu {
       left: 100%;
-  top: 0;
-
+      top: 0;
     }
   }
 }
