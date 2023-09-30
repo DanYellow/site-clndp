@@ -6,50 +6,52 @@
     </button>
   </header>
 
-  <!-- <section class="core"> -->
-    <address>
-      <ul class="contact-bar">
-        <li>
-          <i class="fas fa-phone-alt"></i>
-          <p>+33 01 34 12 63 78</p>
-        </li>
-        <li>
-          <i class="fas fa-clock"></i>
-          <p>
-            Lundi - Vendredi : 7h30 à 18h00
-            <br />
-            Mercredi : 7h30 à 16h
-          </p>
-        </li>
-        <li>
-          <i class="fas fa-map-marker-alt"></i>
-          <p>9 Boulevard Sadi Carnot, 95880 Enghien-Les-Bains</p>
-        </li>
-      </ul>
-    </address>
+  <section class="menu-content" data-sidenav-core>
+    <section class="core" >
+      <address>
+        <ul class="contact-bar">
+          <li>
+            <i class="fas fa-phone-alt"></i>
+            <p>+33 01 34 12 63 78</p>
+          </li>
+          <li>
+            <i class="fas fa-clock"></i>
+            <p>
+              Lundi - Vendredi : 7h30 à 18h00
+              <br />
+              Mercredi : 7h30 à 16h
+            </p>
+          </li>
+          <li>
+            <i class="fas fa-map-marker-alt"></i>
+            <p>9 Boulevard Sadi Carnot, 95880 Enghien-Les-Bains</p>
+          </li>
+        </ul>
+      </address>
 
-    <nav>
-      <ul>
-        {% for menu_item in menu %} {% set html_tag = "a" %} {% set attr_tag =
-        menu.link | raw %} {% if menu_item.sub_menu %} {% set html_tag =
-        "button" %} {% set attr_tag = 'type="button"' %} {% endif %}
-
-        <li>
-          {% if menu_item.sub_menu %}
-          <button type="button" data-submenu-root="">
-            {{ menu_item.name }}
-            <i class="fas fa-chevron-right"></i>
-          </button>
-          {% else %}
-          <a href="">
-            {% if menu_item.icon %}
-            <i class="{{ menu_item.icon }}"></i>
-            {% endif %} {{ menu_item.name }}
-          </a>
-          {% endif %}
-        </li>
-        {% endfor %}
-      </ul>
-    </nav>
-  <!-- </section> -->
+      <nav>
+        <ul>
+          {% for menu_item in menu %} 
+          <li>
+            {% if menu_item.sub_menu %}
+            <button type="button" data-submenu-level="1" data-submenu-root='{{ menu_item.sub_menu | json_encode | e("html_attr") }}'>
+              {{ menu_item.name }}
+              <i class="fas fa-chevron-right"></i>
+            </button>
+            {% else %}
+            <a href="">
+              {% if menu_item.icon %}
+              <i class="{{ menu_item.icon }}"></i>
+              {% endif %} {{ menu_item.name }}
+            </a>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </section>
+    <section data-sidenav-submenu class="sub-menu">
+      <h1 data-name="" class="title"></h1>
+    </section>
+  </section>
 </aside>

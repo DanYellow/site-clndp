@@ -1,6 +1,5 @@
 @import "./media-queries.scss";
 
-
 .sidenav {
   height: 100%;
   width: 400px;
@@ -14,6 +13,7 @@
   z-index: 9999;
   display: none;
   flex-direction: column;
+  overflow: hidden;
 
   @include burger-enable {
     display: flex;
@@ -23,11 +23,23 @@
     width: 100%;
   }
 
+  .menu-content {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    transition: transform 0.5s ease;
+  }
+
   .core {
     display: flex;
     flex-direction: column;
     height: 100%;
     padding-bottom: 20px;
+    transition: transform 0.5s ease;
+
+    // &.hide {
+    //   transform: translateX(-100%);
+    // }
   }
 
   .contact-bar {
@@ -51,7 +63,7 @@
   .header {
     display: grid;
     justify-content: space-between;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
     justify-items: center;
     margin-bottom: 1.5rem;
@@ -73,7 +85,8 @@
     padding: 0 20px;
     overflow-y: auto;
 
-    a, button {
+    a,
+    button {
       padding: 15px 8px 15px 0;
       text-decoration: none;
       font-size: 1.5rem;
@@ -88,7 +101,7 @@
       }
     }
 
-    a i{
+    a i {
       margin-right: 1rem;
     }
 
@@ -108,5 +121,11 @@
     grid-area: icon;
     color: black;
     padding: 0;
+  }
+
+  .sub-menu {
+    .title {
+      font-size: 2rem;
+    }
   }
 }
