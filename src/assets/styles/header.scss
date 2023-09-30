@@ -11,6 +11,10 @@
     margin: 1rem 0;
     font-size: 2rem;
     color: black;
+
+    @include burger-disable {
+      display: none;
+    }
   }
 }
 
@@ -22,7 +26,7 @@
   max-width: var(--max-width);
 
   .header & {
-    @include tablet-max {
+    @include burger-enable {
       display: none;
     }
   }
