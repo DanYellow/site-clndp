@@ -22,6 +22,7 @@ $(function () {
   const sidenav = document.querySelector("[data-sidenav]");
   const burgerOpenBtn = document.querySelector("[data-burger-open-btn]");
   const burgerCloseBtn = document.querySelector("[data-burger-close-btn]");
+  const submenuTriggerBtn = document.querySelector("[data-submenu-root]");
 
   burgerOpenBtn.addEventListener("click", () => {
     sidenav.classList.add("active")
@@ -31,5 +32,9 @@ $(function () {
   burgerCloseBtn.addEventListener("click", () => {
     sidenav.classList.remove("active")
     document.body.classList.remove("sidemenu-opened")
+  })
+
+  submenuTriggerBtn.addEventListener("click", () => {
+    
   })
 });

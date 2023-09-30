@@ -1,11 +1,12 @@
 <aside data-sidenav class="sidenav">
-    <header class="header">
-        <img src="assets/images/logo-footer.svg" alt="logo-clndp" />
-        <button type="button" class="close-btn" data-burger-close-btn>
-          <i class="fa fa-times"></i>
-        </button>
-    </header>
+  <header class="header">
+    <img src="assets/images/logo-footer.svg" alt="logo-clndp" />
+    <button type="button" class="close-btn" data-burger-close-btn>
+      <i class="fa fa-times"></i>
+    </button>
+  </header>
 
+  <!-- <section class="core"> -->
     <address>
       <ul class="contact-bar">
         <li>
@@ -27,33 +28,28 @@
       </ul>
     </address>
 
-  <nav>
-    <ul>
-      {% for menu_item in menu %}
-        {% set html_tag = "a" %}
-        {% set attr_tag = menu.link | raw %}
-        
-        {% if menu_item.sub_menu %}
-          {% set html_tag = "button" %}
-          {% set attr_tag = 'type="button"' %}
-        {% endif %}
-        
+    <nav>
+      <ul>
+        {% for menu_item in menu %} {% set html_tag = "a" %} {% set attr_tag =
+        menu.link | raw %} {% if menu_item.sub_menu %} {% set html_tag =
+        "button" %} {% set attr_tag = 'type="button"' %} {% endif %}
+
         <li>
           {% if menu_item.sub_menu %}
-            <button type="button">
-              {{ menu_item.name }}
-              <i class="fas fa-chevron-right"></i>
-            </button>
+          <button type="button" data-submenu-root="">
+            {{ menu_item.name }}
+            <i class="fas fa-chevron-right"></i>
+          </button>
           {% else %}
-            <a href="">
-              {% if menu_item.icon %}
-                <i class="{{ menu_item.icon }}"></i>
-              {% endif %}
-              {{ menu_item.name }}
-            </a>
+          <a href="">
+            {% if menu_item.icon %}
+            <i class="{{ menu_item.icon }}"></i>
+            {% endif %} {{ menu_item.name }}
+          </a>
           {% endif %}
         </li>
-      {% endfor %}
-    </ul>
-  </nav>
+        {% endfor %}
+      </ul>
+    </nav>
+  <!-- </section> -->
 </aside>

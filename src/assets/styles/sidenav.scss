@@ -7,10 +7,10 @@
   position: fixed;
   z-index: 1;
   top: 0;
-  left: -100%; 
+  transform: translateX(-100%);
   background-color: #fff;
-  padding: 15px 0 20px;
-  transition: left 0.5s ease;
+  padding: 15px 0 0;
+  transition: transform 0.5s ease;
   z-index: 9999;
   display: none;
   flex-direction: column;
@@ -21,6 +21,13 @@
 
   @include mobile {
     width: 100%;
+  }
+
+  .core {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-bottom: 20px;
   }
 
   .contact-bar {
@@ -92,7 +99,7 @@
   }
 
   &.active {
-    left: 0;
+    transform: translateX(0%);
   }
 
   .close-btn {
