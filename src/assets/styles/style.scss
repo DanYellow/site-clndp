@@ -166,6 +166,10 @@ button {
     gap: 30px 20px;
 
     @include tablet-max {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include mobile {
       grid-template-columns: none;
 
       column-gap: 10px;
@@ -190,11 +194,11 @@ button {
       .activity-title {
         position: absolute;
         bottom: 0%;
-        left: 30%;
-        right: 30%;
+        left: 50%;
+        transform: translateX(-50%);
         background-color: #f8cb53;
         text-align: center;
-        padding: 10px;
+        padding: 10px 30px;
         color: white;
       }
     }
@@ -202,7 +206,7 @@ button {
 }
 
 .cta-wrapper {
-  margin: 55px 0px;
+  margin: 30px 0px 55px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -238,7 +242,7 @@ button {
     right: 50%;
     background: #418cd8e1;
     color: #fff;
-    padding: 64px;
+    padding: 60px 35px;
 
     @include tablet-max {
       position: static;
@@ -288,7 +292,7 @@ button {
   grid-template-columns: repeat(5, 127px);
   justify-content: space-around;
 
-  @include tablet-max {
+  @include mobile {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }

@@ -5,6 +5,7 @@
 .burger-icon-container {
   max-width: var(--max-width);
   margin: 0 auto;
+  padding: 0 15px;
   .burger-btn {
     margin: 1rem 0;
     font-size: 2rem;
@@ -13,13 +14,19 @@
 
 .contact-bar {
   display: flex;
-  padding: 10px 30px;
+  padding: 10px 15px;
   column-gap: 0.85rem;
   margin: 0 auto;
   max-width: var(--max-width);
 
+  .header & {
+    @include tablet-max {
+      display: none;
+    }
+  }
+
   @include tablet-max {
-    display: none;
+    flex-direction: column;
   }
 
   li {
@@ -29,6 +36,10 @@
 
     &:last-child {
       margin-left: auto;
+
+      @include tablet-max {
+        margin-left: 0;
+      }
     }
   }
 

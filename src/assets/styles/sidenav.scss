@@ -1,0 +1,76 @@
+@import "./media-queries.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Condensed:wght@400;700&display=swap");
+
+/* Sidenav menu */
+.sidenav {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  padding: 20px 40px;
+  transition: left 0.5s ease;
+  z-index: 9999;
+
+  @include tablet-only {
+    width: 375px;
+  }
+
+  @include mobile {
+    width: 100%;
+  }
+
+  .contact-bar {
+    margin-bottom: 1.5rem;
+    row-gap: 0.5rem;
+  }
+}
+
+.sidenav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Sidenav menu links */
+.sidenav nav {
+
+  a {
+    padding: 15px 8px 15px 0;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #418cd8;
+    display: block;
+    transition: 0.3s;
+    display: block;
+    height: 100%;
+  }
+}
+
+.sidenav a:hover {
+  color: #111;
+}
+
+/* Active class */
+.sidenav.active {
+  left: 0;
+}
+
+/* Close btn */
+.sidenav .close {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.burger-icon span {
+  display: block;
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}
