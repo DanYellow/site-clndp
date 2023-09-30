@@ -2,18 +2,20 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Condensed:wght@400;700&display=swap");
 
-/* Sidenav menu */
+/* Sidenav menu  */
 .sidenav {
   height: 100%;
-  width: 250px;
+  width: 400px;
   position: fixed;
   z-index: 1;
   top: 0;
-  left: 0;
+  left: -100%; 
   background-color: #fff;
-  padding: 20px 40px;
+  padding: 15px 0 20px;
   transition: left 0.5s ease;
   z-index: 9999;
+  display: flex;
+  flex-direction: column;
 
   @include tablet-only {
     width: 375px;
@@ -24,53 +26,81 @@
   }
 
   .contact-bar {
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.05rem;
     row-gap: 0.5rem;
+    background-color: #f8cb531f;
+    padding: 20px;
+    flex-direction: column;
+
+    li:last-child {
+      margin-left: 0;
+    }
   }
-}
 
-.sidenav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
 
-/* Sidenav menu links */
-.sidenav nav {
+  .header {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+    grid-template: ". logo icon";
+    padding: 0 20px;
 
-  a {
-    padding: 15px 8px 15px 0;
-    text-decoration: none;
+    img {
+      width: 75px;
+      display: block;
+      justify-self: center;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  nav {
+    padding: 0 20px;
+    overflow-y: auto;
+
+    a {
+      padding: 15px 8px 15px 0;
+      text-decoration: none;
+      font-size: 1.5rem;
+      color: #418cd8;
+      display: block;
+      transition: 0.3s;
+      display: block;
+      height: 100%;
+
+      &:hover {
+        color: #111;
+      }
+    }
+  }
+
+  &.active {
+    left: 0;
+  }
+
+  .close-btn {
     font-size: 1.5rem;
-    color: #418cd8;
-    display: block;
-    transition: 0.3s;
-    display: block;
-    height: 100%;
+    justify-self: end;
+    grid-area: icon;
+    color: black;
+    padding: 0;
   }
-}
-
-.sidenav a:hover {
-  color: #111;
-}
-
-/* Active class */
-.sidenav.active {
-  left: 0;
-}
-
-/* Close btn */
-.sidenav .close {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
 }
 
 .burger-icon span {
   display: block;
   width: 35px;
   height: 5px;
-  background-color: black;
+  color: black;
   margin: 6px 0;
 }

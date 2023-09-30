@@ -43,12 +43,19 @@ button {
   border: none;
   outline: none;
   background: none;
+  padding: 0;
+  margin: 0;
 }
 
 .main {
   background: url("assets/images/header/background-header.svg") no-repeat right
     top;
   background-size: contain;
+}
+
+.sidemenu-opened {
+  overflow: hidden;
+  height: 100vh;
 }
 
 .main-content {

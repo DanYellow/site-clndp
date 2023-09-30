@@ -8,8 +8,8 @@ $(function () {
     },
   });
 
+  const myPlayer = videojs("my-video");
   function togglePause() {
-    var myPlayer = videojs("my-video");
     if (myPlayer.paused()) {
       myPlayer.play();
     } else {
@@ -18,4 +18,18 @@ $(function () {
   }
 
   document.getElementById("my-video").addEventListener("click", togglePause);
+
+  const sidenav = document.querySelector("[data-sidenav]");
+  const burgerOpenBtn = document.querySelector("[data-burger-open-btn]");
+  const burgerCloseBtn = document.querySelector("[data-burger-close-btn]");
+
+  burgerOpenBtn.addEventListener("click", () => {
+    sidenav.classList.add("active")
+    document.body.classList.add("sidemenu-opened")
+  })
+  
+  burgerCloseBtn.addEventListener("click", () => {
+    sidenav.classList.remove("active")
+    document.body.classList.remove("sidemenu-opened")
+  })
 });

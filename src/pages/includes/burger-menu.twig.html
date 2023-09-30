@@ -1,9 +1,11 @@
-<aside id="mySidenav" class="sidenav">
-    <header>
+<aside data-sidenav class="sidenav">
+    <header class="header">
         <img src="assets/images/logo-footer.svg" alt="logo-clndp" />
-        <a id="closeBtn" href="#" class="close">&times;</a>
+        <button type="button" class="close-btn" data-burger-close-btn>
+          <i class="fas fa-times"></i>
+        </button>
     </header>
-  <section>
+
     <address>
       <ul class="contact-bar">
         <li>
@@ -24,7 +26,7 @@
         </li>
       </ul>
     </address>
-  </section>
+
   <nav>
     <ul>
       <li><a href="#">Accueil</a></li>
