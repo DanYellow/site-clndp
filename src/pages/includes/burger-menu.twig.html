@@ -1,5 +1,9 @@
 <aside data-sidenav class="sidenav">
   <header class="header">
+    <button type="button" data-burger-return-btn>
+      <i class="fas fa-long-arrow-alt-left"></i>
+    </button>
+    
     <img src="assets/images/logo-footer.svg" alt="logo-clndp" />
     <button type="button" class="close-btn" data-burger-close-btn>
       <i class="fa fa-times"></i>
@@ -50,8 +54,33 @@
         </ul>
       </nav>
     </section>
-    <section data-sidenav-submenu class="sub-menu">
-      <h1 data-name="" class="title"></h1>
-    </section>
+    <!-- <section data-sidenav-submenu class="core">
+      <h1 data-title="" class="title"></h1>
+      <nav>
+        <ul data-list-items="">
+          <li></li>
+        </ul>
+      </nav>
+    </section> -->
   </section>
 </aside>
+
+<template data-template-id="submenu-panel">
+  <section data-sidenav-submenu class="sub-menu">
+    <h1 data-name="" class="title"></h1>
+    <nav>
+      <ul data-list-items="">
+      </ul>
+    </nav>
+  </section>
+</template>
+
+<template data-template-id="submenu-button">
+  <button type="button">
+      <i class="fas fa-chevron-right"></i>
+  </button>
+</template>
+
+<template data-template-id="submenu-link">
+  <a href=""></a>
+</template>
