@@ -20,7 +20,7 @@ $(function () {
   document.getElementById("my-video").addEventListener("click", togglePause);
 
   const sidenav = document.querySelector("[data-sidenav]");
-  const sidenavMenuContent = document.querySelector("[data-sidenav-core]");
+  const sidenavMenuContent = document.querySelector("[data-menus-container]");
 
   const burgerOpenBtn = document.querySelector("[data-burger-open-btn]");
   const burgerCloseBtn = document.querySelector("[data-burger-close-btn]");
@@ -45,7 +45,6 @@ $(function () {
 
   burgerCloseBtn.addEventListener("click", () => {
     sidenav.classList.remove("active");
-    // sidenavMenuContent.classList.remove("hide")
     document.body.classList.remove("sidemenu-opened");
   });
 
@@ -62,6 +61,10 @@ $(function () {
     const submenuData = JSON.parse(submenuDataRaw);
     const submenuTitle = e.target.textContent;
     const submenuPanelTplClone = submenuPanelTpl.content.cloneNode(true);
+
+    submenuPanelTplClone.querySelector("[data-sub-menu-level]").dataset.subMenuLevel = currentSubMenuLevel
+    
+    const submenuPanelTplCloneForLevel = sidenavMenuContent.querySelector(`[data-sub-menu-level="${currentSubMenuLevel}"]`)
 
     sidenavMenuContent.style.transform = `translateX(-${
       currentSubMenuLevel * 100
@@ -95,7 +98,11 @@ $(function () {
       submenuPanelTplClone.querySelector("[data-list-items]").appendChild(li);
     });
 
-    sidenavMenuContent.append(submenuPanelTplClone);
+    if(submenuPanelTplCloneForLevel !== null) {
+      submenuPanelTplCloneForLevel.replaceWith(submenuPanelTplClone)
+    } else {
+      sidenavMenuContent.append(submenuPanelTplClone);
+    }
   };
 
   submenuTriggerBtn.forEach((element) => {
