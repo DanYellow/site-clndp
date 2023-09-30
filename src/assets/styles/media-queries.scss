@@ -12,12 +12,12 @@ $media-query: 'only screen and';
 $mobile:          '#{$media-query} (max-width: #{$breakpoint-tablet - 1})';
 $phablet:         '#{$media-query} (min-width: #{$breakpoint-phablet})';
 $tablet:          '#{$media-query} (min-width: #{$breakpoint-tablet})';
-$tablet-max :     '#{$media-query} (max-width: #{$breakpoint-desktop - 1})';
+$tablet-max:      '#{$media-query} (max-width: #{$breakpoint-desktop - 1})';
 $tablet-only:     '#{$media-query} (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop - 1})';
 $desktop:         '#{$media-query} (min-width: #{$breakpoint-desktop})';
 $desktop-xl:      '#{$media-query} (min-width: #{$breakpoint-desktop-xl})';
-$burger-enable:   '#{$media-query} (max-width: #{$breakpoint-burger - 1})';
-$burger-disable:  '#{$media-query} (min-width: #{$breakpoint-burger})';
+$burger-enable:   '#{$media-query} (max-width: #{$breakpoint-desktop-xl - 1})';
+$burger-disable:  '#{$media-query} (min-width: #{$breakpoint-desktop-xl})';
 // Mixins media queries
 @mixin mobile         { @media #{$mobile}         { @content; } }
 @mixin phablet        { @media #{$phablet}        { @content; } }

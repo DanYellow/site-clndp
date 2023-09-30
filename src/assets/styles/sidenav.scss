@@ -1,6 +1,7 @@
 @import "./media-queries.scss";
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto+Condensed:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap");
 
 /* Sidenav menu  */
 .sidenav {
@@ -14,11 +15,11 @@
   padding: 15px 0 20px;
   transition: left 0.5s ease;
   z-index: 9999;
-  display: flex;
+  display: none;
   flex-direction: column;
 
-  @include tablet-only {
-    width: 375px;
+  @include burger-enable {
+    display: flex;
   }
 
   @include mobile {
@@ -68,15 +69,17 @@
     padding: 0 20px;
     overflow-y: auto;
 
-    a {
+    a, button {
       padding: 15px 8px 15px 0;
       text-decoration: none;
       font-size: 1.5rem;
       color: #418cd8;
       display: block;
       transition: 0.3s;
-      display: block;
-      height: 100%;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
 
       &:hover {
         color: #111;

@@ -2,7 +2,7 @@
     <header class="header">
         <img src="assets/images/logo-footer.svg" alt="logo-clndp" />
         <button type="button" class="close-btn" data-burger-close-btn>
-          <i class="fas fa-times"></i>
+          <i class="fa fa-times"></i>
         </button>
     </header>
 
@@ -29,17 +29,31 @@
 
   <nav>
     <ul>
-      <li><a href="#">Accueil</a></li>
-      <li><a href="#">L'établissement</a></li>
-      <li><a href="#">Orientation</a></li>
-      <li><a href="#">Blog</a></li>
-      <li><a href="#">Partenaires</a></li>
-      <li><a href="#">Liens</a></li>
-      <li><a href="#">Contact/Accès</a></li>
-      <li><a href="#">P.P.M.S</a></li>
-      <li>
-        <a href="#"><i class="fas fa-user-plus"></i> S'inscrire</a>
-      </li>
+      {% for menu_item in menu %}
+        {% set html_tag = "a" %}
+        {% set attr_tag = menu.link | raw %}
+        
+        {% if menu_item.sub_menu %}
+          {% set html_tag = "button" %}
+          {% set attr_tag = 'type="button"' %}
+        {% endif %}
+        
+        <li>
+          {% if menu_item.sub_menu %}
+            <button type="button">
+              {{ menu_item.name }}
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          {% else %}
+            <a href="">
+              {% if menu_item.icon %}
+                <i class="{{ menu_item.icon }}"></i>
+              {% endif %}
+              {{ menu_item.name }}
+            </a>
+          {% endif %}
+        </li>
+      {% endfor %}
     </ul>
   </nav>
 </aside>

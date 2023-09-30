@@ -1,0 +1,151 @@
+{
+  "menu": [
+    {
+      "name": "Accueil",
+      "link": "#"
+    },
+    {
+      "name": "L'établissement",
+      "sub_menu": [
+        {
+          "name": "Histoire",
+          "link": "https://ndp-enghien.org/index.php/2015-06-22-09-08-51/l-histoire"
+        },
+        {
+          "name": "Présentation de l'établissement",
+          "link": "https://ndp-enghien.org/images/presentation2.pdf"
+        },
+        {
+          "name": "Etre élève à Notre-Dame Providence",
+          "link": "https://ndp-enghien.org/images/etre_eleve.pdf"
+        },
+        {
+          "name": "Projet de l'établissement",
+          "link": "https://ndp-enghien.org/images/projet2.pdf"
+        },
+        {
+          "name": "Vie scolaire",
+          "link": "https://ndp-enghien.org/mag/"
+        },
+        {
+          "name": "Revues",
+          "link": "https://ndp-enghien.org/index.php/2015-06-22-09-08-51/2015-07-02-09-46-59"
+        }
+      ]
+    },
+    {
+      "name": "Orientation",
+      "sub_menu": [
+        {
+          "name": "L'année de 6ème",
+          "link": "https://ndp-enghien.org/images/orientation/verslasixieme2023.pdf"
+        },
+        {
+          "name": "Après la 3ème",
+          "link": "https://ndp-enghien.org/images/orientation/apres_la_3e_2023.pdf"
+        },
+        {
+          "name": "Après la Seconde",
+          "icon": "fas fa-chevron-right",
+          "sub_menu": [
+            {
+              "name": "Que faire après ?",
+              "link": ""
+            },
+            {
+              "name": "Bien choisir ses spécialités",
+              "link": ""
+            },
+            {
+              "name": "Réussir dans le lycée",
+              "link": ""
+            }
+          ]
+        },
+        {
+          "name": "Après cycle terminal",
+          "link": "https://ndp-enghien.org/images/orientation/PRESENTATION_SUPERIEUR.pdf"
+        },
+        {
+          "name": "Stage 3ème",
+          "link": "https://ndp-enghien.org/index.php/l-orientation/stage-3eme"
+        }
+      ]
+    },
+    {
+      "name": "Blog",
+      "link": "#",
+      "sub_menu": [
+        {
+          "name": "APEL",
+          "link": "https://apelndp95880.wordpress.com/"
+        },
+        {
+          "name": "Pastorale",
+          "link": "https://ndp-enghien.org/pastorale/"
+        },
+        {
+          "name": "C.D.I du Collège",
+          "link": "https://0951504u.esidoc.fr/"
+        },
+        {
+          "name": "C.D.I du Lycée",
+          "link": "https://0950753c.esidoc.fr/"
+        },
+        {
+          "name": "B.D.I",
+          "link": "https://www.ndp-enghien.org/bdi/"
+        }
+      ]
+    },
+    {
+      "name": "Partenaires",
+      "link": "#",
+      "sub_menu": [
+        {
+          "name": "Direction Diocésaine du Val-d'Oise",
+          "link": "https://ddec95.org/"
+        },
+        {
+          "name": "Fondation Saint Matthieu",
+          "link": "https://www.fondation-st-matthieu.org/"
+        },
+        {
+          "name": "Formiris : devenir enseignant",
+          "link": "https://www.formiris.org/"
+        },
+        {
+          "name": "L'enseignement catholique recrute",
+          "link": "https://ddec95.org/sites/devenirenseignant/"
+        }
+      ]
+    },
+    {
+      "name": "Liens",
+      "link": "#",
+      "sub_menu": [
+        {
+          "name": "Se préparer à l'ASSR",
+          "link": "https://e-assr.education-securite-routiere.fr/preparer/assr"
+        },
+        {
+          "name": "Prévention du harcèlement",
+          "link": "https://www.education.gouv.fr/non-au-harcelement"
+        }
+      ]
+    },
+    {
+      "name": "Contact/Accès",
+      "link": "#"
+    },
+    {
+      "name": "P.P.M.S",
+      "link": "#"
+    },
+    {
+      "name": "S'inscrire",
+      "icon": "fas fa-user-plus",
+      "link": "#"
+    }
+  ]
+}
