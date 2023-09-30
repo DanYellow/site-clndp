@@ -25,6 +25,8 @@ $(function () {
   const burgerOpenBtn = document.querySelector("[data-burger-open-btn]");
   const burgerCloseBtn = document.querySelector("[data-burger-close-btn]");
   const burgerReturnBtn = document.querySelector("[data-burger-return-btn]");
+  burgerReturnBtn.style.visibility = "hidden";
+  
   const submenuTriggerBtn = document.querySelectorAll("[data-submenu-root]");
 
   const submenuPanelTpl = document.querySelector(
@@ -50,6 +52,9 @@ $(function () {
 
   burgerReturnBtn.addEventListener("click", () => {
     currentSubMenuLevel = Math.max(0, currentSubMenuLevel - 1)
+    if(currentSubMenuLevel === 0) {
+      burgerReturnBtn.style.visibility = "hidden";
+    }
     sidenavMenuContent.style.transform = `translateX(-${
       currentSubMenuLevel * 100
     }%)`;
@@ -57,6 +62,7 @@ $(function () {
 
   const generateSubmenuPanel = (e) => {
     currentSubMenuLevel++;
+    burgerReturnBtn.style.visibility = "visible";
     const submenuDataRaw = e.target.dataset.submenuRoot;
     const submenuData = JSON.parse(submenuDataRaw);
     const submenuTitle = e.target.textContent;
@@ -89,10 +95,6 @@ $(function () {
         link.textContent = item.name;
         link.setAttribute("href", item.link);
       }
-
-      // submenuPanelButton
-      // const button = document.createElement("button");
-      // button.textContent = item.name
 
       li.appendChild(tpl);
       submenuPanelTplClone.querySelector("[data-list-items]").appendChild(li);
