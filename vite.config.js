@@ -1,3 +1,5 @@
+import { resolve } from 'path'
+
 import twig from "@vituum/vite-plugin-twig";
 import vituum from "vituum";
 
@@ -6,12 +8,12 @@ export default {
     vituum(),
     twig({
       root: "./src/pages",
-      formats: ['twig', 'json.twig', 'json', 'twig.html']
+      formats: ["json", "twig.html"],
     }),
   ],
   build: {
     rollupOptions: {
-      input: ["index.twig.html"],
+      input: ['./src/pages/index.twig.html'] 
     },
   },
 };
