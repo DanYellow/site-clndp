@@ -6,10 +6,10 @@
   position: fixed;
   z-index: 1;
   top: 0;
-  transform: translateX(-100%);
   background-color: #fff;
   padding: 15px 0 0;
-  transition: transform 0.5s ease;
+  left: -100%;
+  transition: left 0.5s ease;
   z-index: 9999;
   display: none;
   flex-direction: column;
@@ -17,6 +17,10 @@
 
   @include burger-enable {
     display: flex;
+  }
+
+  &.active {
+    left: 0;
   }
 
   @include mobile {
@@ -28,22 +32,13 @@
     grid-auto-flow: column;
     grid-auto-columns: 100%;
     transition: transform 0.5s ease;
-    height: 90%;
-
-    // display: flex;
-    // flex-direction: column;
-    // height: 100%;
-    // margin-bottom: 20px;
+    height: 92%;
   }
 
   .core {
     display: flex;
     flex-direction: column;
-    // height: 100%;
-    // display: grid;
-    // grid-auto-rows: auto;
     overflow-y: auto;
-
     transition: transform 0.5s ease;
   }
 
@@ -120,10 +115,6 @@
       align-items: center;
       justify-content: space-between;
     }
-  }
-
-  &.active {
-    transform: translateX(0%);
   }
 
   .close-btn {
