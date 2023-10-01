@@ -8,7 +8,7 @@
   </a>
   {% if menu_item.sub_menu %}
     <ul class="sub-menu">
-        {% include 'sub-menu.twig.html' with {'menu': menu_item.sub_menu} %}
+        {% include 'sub-menu.twig' with {'menu': menu_item.sub_menu} %}
     </ul>
   {% endif %}
 </li>

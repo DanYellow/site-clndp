@@ -1,4 +1,4 @@
-{% include 'burger-menu.twig.html' %}
+{% include 'burger-menu.twig' %}
 
 <header class="header">
     <section class="burger-icon-container">
@@ -46,7 +46,7 @@
                     </a>
                     {% if menu_item.sub_menu %}
                         <ul class="sub-menu">
-                            {% include 'sub-menu.twig.html' with {'menu': menu_item.sub_menu} %}
+                            {% include 'sub-menu.twig' with {'menu': menu_item.sub_menu} %}
                         </ul>
                     {% endif %}
                 </li>

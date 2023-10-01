@@ -1,4 +1,4 @@
-{% import "macros/section-title.twig.html" as section_title %}
+{% import "macros/section-title.twig" as section_title %}
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -28,10 +28,10 @@
 
     <script src="assets/js/video.min.js" defer></script>
     <script src="assets/js/main.js" defer></script>
-    <script type="module" src="/src/styles.js" defer></script>
+    <script type="module" src="/src/assets/js/styles.js" defer></script>
   </head>
-  <body>
-    {% include 'includes/header.twig.html' %}
+  <body> 
+    {% include 'includes/header.twig' %}
     <main class="main">
       <!-- <section class="video-cropper">
 						        <section class="video-container">
@@ -161,10 +161,10 @@
               <div class="blue-box"></div>
             </section>
           </section>
-          {% include 'includes/partners.twig.html' %}
+          {% include 'includes/partners.twig' %}
         </section>
       </section>
     </main>
-    {% include 'includes/footer.twig.html' %}
+    {% include 'includes/footer.twig' %}
   </body>
 </html>
