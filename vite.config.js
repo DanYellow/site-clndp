@@ -1,13 +1,15 @@
 import { resolve } from "path";
 
+import { loadEnv } from "vite";
 import twig from "@vituum/vite-plugin-twig";
 import vituum from "vituum";
 
 export default ({ mode }) => {
+  process.env = { ...process.env, ...loadEnv(mode, process.cwd()) };
+
   return {
-    ...(mode === "production" ? { base: "https://danyellow.net/clndp/" } : {}),
+    ...(mode === "production" ? { base: process.env.VITE_BASE_PATH } : {}),
     plugins: [
-      //   pages(),
       vituum(),
       twig({
         root: "./src/pages",
@@ -17,7 +19,7 @@ export default ({ mode }) => {
       manifest: true,
       emptyOutDir: true,
       rollupOptions: {
-        input: ["./src/pages/index.twig"],
+        input: ["./src/pages/*.twig"],
         output: {
           dir: resolve(process.cwd(), "dist"),
         },
