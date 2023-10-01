@@ -2,7 +2,7 @@
   "menu": [
     {
       "name": "Accueil",
-      "link": "#"
+      "link": ""
     },
     {
       "name": "L'établissement",
@@ -74,7 +74,7 @@
     },
     {
       "name": "Blog",
-      "link": "#",
+      "link": "",
       "sub_menu": [
         {
           "name": "APEL",
@@ -100,7 +100,7 @@
     },
     {
       "name": "Partenaires",
-      "link": "#",
+      "link": "",
       "sub_menu": [
         {
           "name": "Direction Diocésaine du Val-d'Oise",
@@ -122,7 +122,7 @@
     },
     {
       "name": "Liens",
-      "link": "#",
+      "link": "",
       "sub_menu": [
         {
           "name": "Se préparer à l'ASSR",
@@ -136,28 +136,17 @@
     },
     {
       "name": "Contact/Accès",
-      "link": "#"
+      "link": ""
     },
     {
       "name": "P.P.M.S",
-      "link": "#"
-    },
-    {
-      "name": "P.P.M.S",
-      "link": "#"
-    },
-    {
-      "name": "P.P.M.S",
-      "link": "#"
-    },
-    {
-      "name": "P.P.M.S",
-      "link": "#"
+      "link": ""
     },
     {
       "name": "S'inscrire",
       "icon": "fas fa-user-plus",
-      "link": "#"
+      "link": "",
+      "class": "sign-in"
     }
   ]
 }
