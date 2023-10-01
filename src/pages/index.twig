@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
+  <base href="/">
     <meta charset="UTF-8" />
     <title>Accueil - Collège Lycée Notre-Dame Providence</title>
     <link rel="icon" href="/assets/images/favicon.svg" />
@@ -16,7 +17,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     />
 
-	  <!-- fancyBox CSS -->
+	<!-- fancyBox CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
 
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -28,7 +29,7 @@
 
     <script src="/assets/js/video.min.js" defer></script>
     <script src="/assets/js/main.js" defer></script>
-    <script type="module" src="/src/assets/js/styles.js" defer></script>
+    <script type="module" src="../assets/js/styles.js" defer></script>
   </head>
   <body> 
     {% include 'includes/header.twig' %}
@@ -62,7 +63,7 @@
             loop
             data-setup='{"controls": false, "autoplay": true, "preload": "auto", "muted": true}'
           >
-            <source src="assets/videos/videoplayback.mp4" type="video/mp4" />
+            <source src="/assets/videos/videoplayback.mp4" type="video/mp4" />
           </video>
           <div class="square-background"></div>
         </section>
@@ -79,29 +80,29 @@
         <section class="socials-activities">
           <ul class="socials-activities-list">
             <li>
-              <img src="assets/images/vie-scolaire/vie-scolaire1.jpg" alt="" />
+              <img src="/assets/images/vie-scolaire/vie-scolaire1.jpg" alt="" />
               <p class="activity-title">Voyages</p>
             </li>
 
             <li>
-              <img src="assets/images/vie-scolaire/vie-scolaire2.jpg" alt="" />
+              <img src="/assets/images/vie-scolaire/vie-scolaire2.jpg" alt="" />
               <p class="activity-title">Sorties</p>
             </li>
 
             <li>
-              <img src="assets/images/vie-scolaire/vie-scolaire3.jpg" alt="" />
+              <img src="/assets/images/vie-scolaire/vie-scolaire3.jpg" alt="" />
               <p class="activity-title">Théâtre</p>
             </li>
             <li>
-              <img src="assets/images/vie-scolaire/vie-scolaire3.jpg" alt="" />
+              <img src="/assets/images/vie-scolaire/vie-scolaire3.jpg" alt="" />
               <p class="activity-title">Numérique</p>
             </li>
             <li>
-              <img src="assets/images/vie-scolaire/vie-scolaire3.jpg" alt="" />
+              <img src="/assets/images/vie-scolaire/vie-scolaire3.jpg" alt="" />
               <p class="activity-title">Projets</p>
             </li>
             <li>
-              <img src="assets/images/vie-scolaire/vie-scolaire3.jpg" alt="" />
+              <img src="/assets/images/vie-scolaire/vie-scolaire3.jpg" alt="" />
               <p class="activity-title">Événements</p>
             </li>
           </ul>
@@ -142,11 +143,11 @@
                   >
                 </li>
                 <li>
-					<a data-fancybox href="assets/videos/videoplayback.mp4" class="video-button"><i class="fas fa-play"></i> L'école en vidéo</a>
+					<a data-fancybox href="/assets/videos/videoplayback.mp4" class="video-button"><i class="fas fa-play"></i> L'école en vidéo</a>
                 </li>
               </ul>
             </article>
-            <img src="assets/images/presentation/presentation.png" alt="" />
+            <img src="/assets/images/presentation/presentation.png" alt="" />
           </section>
 
           {{ section_title.section_title("L'établissement") }}

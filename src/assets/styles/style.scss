@@ -186,7 +186,7 @@ button {
   .socials-activities-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 30px 20px;
+    gap: 20px 20px;
 
     @include tablet-max {
       grid-template-columns: repeat(3, 1fr);
@@ -316,7 +316,7 @@ button {
   justify-content: space-around;
 
   @include mobile {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
   }
 
