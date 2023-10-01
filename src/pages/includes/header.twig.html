@@ -33,7 +33,6 @@
         <ul>
             {% for menu_item in menu %}
                 <li>
-
                     <a href="{{ menu_item.link }}" class="{{ menu_item.class }} {% if loop.first %} active {% endif %}">
                         {% if menu_item.icon %}
                             <i class="{{ menu_item.icon }}"></i>
@@ -42,21 +41,7 @@
                     </a>
                     {% if menu_item.sub_menu %}
                         <ul class="sub-menu">
-                            {% for submenu_item in menu_item.sub_menu %}
-                                <li>
-                                    <a href="{{ submenu_item.link }}">
-                                        {{ submenu_item.name }}
-                                        <i class="fas fa-chevron-right"></i>
-                                    </a>
-                                    {% if submenu_item.sub_menu %}
-                                        <ul class="sub-menu">
-                                            {% for submenu_item in menu_item.sub_menu %}
-                                                <li><a href="{{ submenu_item.link }}">{{ submenu_item.name }}</a></li>
-                                            {% endfor %}
-                                        </ul>
-                                    {% endif %}
-                                </li>
-                            {% endfor %}
+                            {% include 'sub-menu.twig.html' with {'menu': menu_item.sub_menu} %}
                         </ul>
                     {% endif %}
                 </li>

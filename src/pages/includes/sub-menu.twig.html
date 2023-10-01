@@ -1,0 +1,15 @@
+{% for menu_item in menu %}
+<li>
+  <a href="{{ menu_item.link }}">
+    {{ menu_item.name }}
+    {% if menu_item.sub_menu %}
+    <i class="fas fa-chevron-right"></i>
+    {% endif %}
+  </a>
+  {% if menu_item.sub_menu %}
+    <ul class="sub-menu">
+        {% include 'sub-menu.twig.html' with {'menu': menu_item.sub_menu} %}
+    </ul>
+  {% endif %}
+</li>
+{% endfor %}
