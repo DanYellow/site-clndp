@@ -8,22 +8,17 @@ export default ({ mode }) => {
   process.env = { ...process.env, ...loadEnv(mode, process.cwd()) };
 
   return {
-    ...(mode === "production" ? { base: process.env.VITE_BASE_PATH } : {}),
+    // ...(mode === "production" ? { base: process.env.VITE_BASE_PATH } : {}),
     plugins: [
       vituum(),
       twig({
-        root: "./src/pages",
+        // Where the twig files are located
+        root: "./src",
       }),
     ],
-    build: {
-      manifest: true,
-      emptyOutDir: true,
-      rollupOptions: {
-        input: ["./src/pages/*.twig"],
-        output: {
-          dir: resolve(process.cwd(), "dist"),
-        },
-      },
+    server: {
+      // Expose the server to the network allowing access from ip address
+      host: true,
     },
   };
 };

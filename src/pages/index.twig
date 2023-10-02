@@ -1,4 +1,4 @@
-{% import "macros/section-title.twig" as section_title %}
+{% import "components/macros/section-title.twig" as section_title %}
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -31,7 +31,7 @@
     <script type="module" src="/src/assets/js/styles.js" defer></script>
   </head>
   <body> 
-    {% include 'includes/header.twig' %}
+    {% include 'components/header.twig' %}
     <main class="main">
       <!-- <section class="video-cropper">
 						        <section class="video-container">
@@ -161,10 +161,10 @@
               <div class="blue-box"></div>
             </section>
           </section>
-          {% include 'includes/partners.twig' %}
+          {% include 'components/partners.twig' %}
         </section>
       </section>
     </main>
-    {% include 'includes/footer.twig' %}
+    {% include 'components/footer.twig' %}
   </body>
 </html>
