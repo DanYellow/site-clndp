@@ -8,7 +8,7 @@ export default ({ mode }) => {
   process.env = { ...process.env, ...loadEnv(mode, process.cwd()) };
 
   return {
-    // ...(mode === "production" ? { base: process.env.VITE_BASE_PATH } : {}),
+    ...(mode === "production" ? { base: process.env.VITE_BASE_PATH } : {}),
     plugins: [
       vituum(),
       twig({
