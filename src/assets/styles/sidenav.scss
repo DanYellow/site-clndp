@@ -75,7 +75,7 @@
     margin-bottom: 1.5rem;
     position: relative;
     grid-template: ". logo icon";
-    padding: 0 20px;
+    padding: 0 5px;
 
     img {
       width: 75px;
@@ -97,7 +97,7 @@
       text-decoration: none;
       font-size: 1.4rem;
       color: #418cd8;
-      transition: 0.3s;
+      transition: color 0.3s;
       display: flex;
       width: 100%;
       white-space: nowrap;
