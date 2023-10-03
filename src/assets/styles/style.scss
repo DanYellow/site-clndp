@@ -83,13 +83,13 @@ button {
 .video-container {
   width: 65%;
   
-  aspect-ratio: 3/1;
-  object-fit: cover;
-  height: 100%;
-  width: auto;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
+  // aspect-ratio: 3/1;
+  // object-fit: cover;
+  // height: 100%;
+  // width: auto;
+  // overflow: hidden;
+  // display: flex;
+  // align-items: center;
 
   @include tablet-max {
     width: 100%;
