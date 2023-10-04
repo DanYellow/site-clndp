@@ -33,20 +33,30 @@
   <body> 
     {% include 'components/header.twig' %}
     <main class="main">
-						        <section class="video-container">
-						          <video
-						            id="my-video"
-						            class="video-js vjs-fluid"
-						            controls
-						            preload="auto"
-						            width="500"
-						            height="100"
-						            loop
-						            data-setup='{"controls": false, "autoplay": true, "preload": "auto", "muted": true}'
-						          >
-						            <source src="assets/videos/videoplayback.mp4" type="video/mp4" />
-						          </video>
-						        </section>
+      <section class="video-container">
+        <div class="title-container">
+            <h1 class="main-title">Etablissement catholique d'enseignement</h1>
+              <a
+                href="https://ndp-enghien.org/images/presentation2.pdf"
+                class="decouvrir-presentation before">
+                Découvrir l’établissement
+              </a>
+        </div>
+
+        <video
+          id="my-video"
+          class="video-js vjs-fluid"
+          controls
+          preload="auto"
+          width="500"
+          height="100"
+          loop
+          playsinline
+          data-setup='{"controls": false, "autoplay": true, "preload": "auto", "muted": true}'
+        >
+          <source src="/assets/videos/videoplayback.mp4" type="video/mp4" />
+        </video>
+			</section>
 
       <section class="main-content">
         {# <section class="video-container">
@@ -58,6 +68,7 @@
             width="500"
             height="100"
             loop
+            playsinline
             data-setup='{"controls": false, "autoplay": true, "preload": "auto", "muted": true}'
           >
             <source src="/assets/videos/videoplayback.mp4" type="video/mp4" />
@@ -65,12 +76,6 @@
           <div class="square-background"></div>
         </section> #}
 
-        <h1 class="main-title">Etablissement catholique d'enseignement</h1>
-        <a
-          href="https://ndp-enghien.org/images/presentation2.pdf"
-          class="decouvrir-presentation before"
-          >Découvrir l’établissement</a
-        >
 
         {{ section_title.section_title(' Une vie scolaire dynamique ') }}
 
