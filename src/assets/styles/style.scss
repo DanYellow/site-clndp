@@ -153,7 +153,7 @@ button {
   color: #000000;
   font-weight: 800;
   font-size: var(--title-size);
-  margin-top: 90px;
+  padding-top: 90px;
   margin-bottom: 40px;
   display: flex;
   justify-content: center;
@@ -345,7 +345,6 @@ button {
 
   .partner {
     display: flex;
-    flex-shrink: 0;
     align-items: center;
     justify-content: center;
     border: 3px solid #f8cb53;
@@ -354,7 +353,7 @@ button {
     transition: border 0.2s ease-in-out;
 
     &:hover {
-      border: 3px solid #418cd8;
+      border-color: #418cd8;
     }
 
     a {

@@ -68,7 +68,7 @@ const generateSubmenuPanel = (e) => {
     if ("sub_menu" in item) {
       tpl = submenuPanelButton.content.cloneNode(true);
       const button = tpl.querySelector("button");
-      var text = document.createTextNode(item.name);
+      const text = document.createTextNode(item.name);
       button.prepend(text);
       button.dataset.submenuRoot = JSON.stringify(item.sub_menu);
       button.addEventListener("click", generateSubmenuPanel);
