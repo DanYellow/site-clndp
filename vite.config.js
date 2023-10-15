@@ -1,5 +1,3 @@
-import { resolve } from "path";
-
 import { loadEnv } from "vite";
 import twig from "@vituum/vite-plugin-twig";
 import vituum from "vituum";
@@ -8,7 +6,9 @@ export default ({ mode }) => {
   process.env = { ...process.env, ...loadEnv(mode, process.cwd()) };
 
   return {
-    ...(mode === "production" ? { base: process.env.VITE_BASE_PATH } : {}),
+    ...(mode === "production" && process.platform === "win32"
+      ? { base: process.env.VITE_BASE_PATH }
+      : { base: "./" }),
     css: {
       // Displays the source of sass files in dev
       devSourcemap: true,
@@ -20,10 +20,9 @@ export default ({ mode }) => {
         root: "./src",
       }),
     ],
-    build:
-    {
-        emptyOutDir: true,
-        sourcemap: true
+    build: {
+      emptyOutDir: true,
+      sourcemap: true,
     },
     server: {
       // Expose the server to the network allowing access from ip address
